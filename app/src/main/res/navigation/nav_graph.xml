@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/fishGridFragment">
+
+    <fragment
+        android:id="@+id/fishGridFragment"
+        android:name="com.example.stardewfishingcompanion.FishGridFragment"
+        android:label="@string/fish_grid_label"
+        tools:layout="@layout/fragment_fish_grid" >
+        <action
+            android:id="@+id/action_fishGridFragment_to_fishDetailFragment"
+            app:destination="@id/fishDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fishDetailFragment"
+        android:label="{fishLabel}"
+        android:name="com.example.stardewfishingcompanion.FishDetailFragment"
+        tools:layout="@layout/fragment_fish_detail" >
+        <argument android:name="fishLabel" app:argType="string"/>
+    </fragment>
+</navigation>
